@@ -1,0 +1,11 @@
+.git
+.npmrc
+.eslintrc
+.editorconfig
+.dockerignore
+.DS_Store
+*Dockerfile*
+*docker-compose*
+.env.*.local
+node_modules
+test
