@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import config from "./config/auth0.config.json";
 import * as serviceWorker from "./serviceWorker";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // A function that routes the user to the right place
 // after login
