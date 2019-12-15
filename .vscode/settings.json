@@ -1,0 +1,8 @@
+{
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "eslint.workingDirectories": [
+    { "directory": "./client", "changeProcessCWD": true },
+    { "directory": "./api", "changeProcessCWD": true }
+  ]
+}
