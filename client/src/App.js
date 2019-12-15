@@ -1,8 +1,8 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import AuthenticatedRoute from "./components/AuthenticatedRoute";
-import NavBar from "./components/Navbar";
-import Profile from "./components/Profile";
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AuthenticatedRoute from './components/AuthenticatedRoute';
+import NavBar from './components/Navbar';
+import Profile from './components/Profile';
 
 function App() {
   return (

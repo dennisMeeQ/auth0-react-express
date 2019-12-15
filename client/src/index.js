@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Auth0Provider } from "./auth/react-auth0-spa";
-import "./index.css";
-import App from "./App";
-import config from "./config/auth0.config.json";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Auth0Provider } from './auth/react-auth0-spa';
+import './index.css';
+import App from './App';
+import config from './config/auth0.config.json';
+import * as serviceWorker from './serviceWorker';
 
 // A function that routes the user to the right place
 // after login
-const onRedirectCallback = appState => {
+const onRedirectCallback = (appState) => {
   window.history.replaceState(
     {},
     document.title,
@@ -27,7 +27,7 @@ ReactDOM.render(
   >
     <App />
   </Auth0Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 serviceWorker.unregister();
