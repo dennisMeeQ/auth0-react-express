@@ -1,7 +1,6 @@
 FROM node:lts-slim as builder
 
-# ARG AUTH0_CLIENTID
-# ENV REACT_APP_AUTH0_CLIENTID ${AUTH0_CLIENTID}
+ARG REACT_APP_API_URL
 
 WORKDIR /usr/src/app
 
