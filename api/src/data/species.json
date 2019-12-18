@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Human",
+    "classification": "mammal",
+    "homeworld": "Coruscant",
+    "language": "Galactic Basic"
+  },
+  {
+    "name": "Droid",
+    "classification": "artificial",
+    "homeworld": null,
+    "language": "n/a"
+  },
+  {
+    "name": "Wookiee",
+    "classification": "mammal",
+    "homeworld": "Kashyyyk",
+    "language": "Shyriiwook"
+  },
+  {
+    "name": "Hutt",
+    "classification": "gastropod",
+    "homeworld": "Nal Hutta",
+    "language": "Huttese"
+  },
+  {
+    "name": "Yoda's species",
+    "classification": "mammal",
+    "homeworld": "Dagobah?",
+    "language": "Galactic basic"
+  }
+]

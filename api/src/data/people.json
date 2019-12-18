@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Yoda",
+    "height": "66",
+    "birth_year": "896BBY",
+    "gender": "male",
+    "species": "Yoda's species"
+  },
+  {
+    "name": "Luke Skywalker",
+    "height": "172",
+    "birth_year": "19BBY",
+    "gender": "male",
+    "species": "Human"
+  },
+  {
+    "name": "C-3PO",
+    "height": "167",
+    "birth_year": "112BBY",
+    "gender": "n/a",
+    "species": "Droid"
+  },
+  {
+    "name": "Leia Organa",
+    "height": "150",
+    "birth_year": "19BBY",
+    "gender": "female",
+    "species": "Human"
+  },
+  {
+    "name": "R2-D2",
+    "height": "96",
+    "birth_year": "33BBY",
+    "gender": "n/a",
+    "species": "Droid"
+  },
+  {
+    "name": "Chewbacca",
+    "height": "228",
+    "birth_year": "200BBY",
+    "gender": "male",
+    "species": "Wookiee"
+  },
+  {
+    "name": "Jabba Desilijic Tiure",
+    "height": "175",
+    "birth_year": "600BBY",
+    "gender": "hermaphrodite",
+    "species": "Hutt"
+  }
+]

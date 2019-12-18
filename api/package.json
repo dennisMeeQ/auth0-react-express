@@ -1,0 +1,39 @@
+{
+  "name": "auth-api",
+  "version": "0.1.0",
+  "description": "API for the example Auth0 implementation",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennisMeeQ/auth0-react-express.git"
+  },
+  "author": "Dennis Stötzel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dennisMeeQ/auth0-react-express/issues"
+  },
+  "homepage": "https://blog.allthingsauth.dev",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "express-jwt": "5.3.1",
+    "jwks-rsa": "1.6.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "prettier": "^1.19.1"
+  }
+}
