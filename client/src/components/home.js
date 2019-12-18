@@ -5,7 +5,7 @@ const Home = () => {
   const [turtles, setTurtles] = useState();
 
   async function fetchData() {
-    const baseUrl = process.env.API_URL || 'http://localhost:3001';
+    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
     const res = await fetch(`${baseUrl}/species`);
     res
       .json()
