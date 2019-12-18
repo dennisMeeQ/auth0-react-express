@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth0 } from '../../auth/react-auth0-spa';
+import { useAuth0 } from '../auth/react-auth0-spa';
 
 const Profile = () => {
   const { loading, user } = useAuth0();

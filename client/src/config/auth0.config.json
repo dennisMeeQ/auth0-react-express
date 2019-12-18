@@ -1,4 +1,5 @@
 {
   "domain": "spa-test.auth0.com",
-  "clientId": "melxSZVFgL9ONwTaggwozHOsjeTVvJOF"
+  "clientId": "melxSZVFgL9ONwTaggwozHOsjeTVvJOF",
+  "audience": "https://api.allthingsauth.dev"
 }
