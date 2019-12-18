@@ -1,6 +1,5 @@
-setup:
-  config:
-    REACT_APP_API_URL: https://api-auth0.herokuapp.com
 build:
   docker:
     web: Dockerfile
+  config:
+    REACT_APP_API_URL: https://api-auth0.herokuapp.com
