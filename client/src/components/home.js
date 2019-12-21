@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import './table.css';
+
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [species, setSpecies] = useState();

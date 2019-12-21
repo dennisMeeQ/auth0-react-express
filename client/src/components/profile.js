@@ -10,11 +10,12 @@ const Profile = () => {
 
   return (
     <>
-      <img src={user.picture} alt="Profile" />
-
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
-      <code>{JSON.stringify(user, null, 2)}</code>
+      <h3>User name: {user.name}</h3>
+      <p>Email: {user.email}</p>
+      <p>ID token content:</p>
+      <pre>
+        <code>{JSON.stringify(user, null, 2)}</code>
+      </pre>
     </>
   );
 };
