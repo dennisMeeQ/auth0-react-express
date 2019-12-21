@@ -35,6 +35,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v1
       - name: docker-build client
-        run: docker build ./client/Dockerfile
+        run: docker build ./client
       - name: docker-build api
-        run: docker build ./api/Dockerfile
+        run: docker build ./api
