@@ -1,0 +1,40 @@
+name: Basic Checks
+on: [push, pull_request]
+
+jobs:
+  basic:
+    name: Linting and dependeny checks for client
+    runs-on: ubuntu-18.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      - run: npm install client
+        working-directory: ./client
+      - name: linter client
+        run: npm run lint
+        working-directory: ./client
+      - name: dependency-check client
+        run: npm audit
+        working-directory: ./client
+      - run: npm install api
+        working-directory: ./api
+      - name: linter api
+        run: npm run lint
+        working-directory: ./api
+      - name: dependency-check api
+        run: npm audit
+        working-directory: ./api
+
+  docker:
+    name: Docker build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: docker-build client
+        run: docker build ./client/Dockerfile
+      - name: docker-build api
+        run: docker build ./api/Dockerfile
