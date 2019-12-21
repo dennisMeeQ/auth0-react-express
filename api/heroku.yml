@@ -1,0 +1,8 @@
+setup:
+  config:
+    CORS: https://spa-auth0.herokuapp.com
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: CORS="https://spa-auth0.herokuapp.com" npm start
