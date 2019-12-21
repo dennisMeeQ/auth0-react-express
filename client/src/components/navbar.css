@@ -1,0 +1,88 @@
+.menu:hover .menu__link:hover {
+  color: #fff;
+}
+
+.menu {
+  background-color: #95a5a6;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.menu__list {
+  display: flex;
+  text-align: center;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.menu__group {
+  flex-grow: 1;
+}
+
+.menu__link {
+  display: block;
+
+  padding: 2rem 1.5rem;
+
+  font-weight: 700;
+  color: #363a3a;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu__button {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 13px;
+  cursor: pointer;
+
+  font-weight: 700;
+  color: #363a3a;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.menu__link_active {
+  color: #fff;
+  pointer-events: none;
+}
+
+.menu__link {
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color 0.25s ease-out;
+}
+
+.menu__link::before,
+.menu__link::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+
+  will-change: width;
+  transition: width 0.1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.menu__link::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu__link::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.menu__link:hover::before,
+.menu__link:hover::after {
+  width: 100%;
+  transition-duration: 0.2s;
+}
