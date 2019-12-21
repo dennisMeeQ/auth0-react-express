@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [turtles, setTurtles] = useState();
+  const [species, setSpecies] = useState();
 
   async function fetchData() {
     const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
@@ -10,7 +10,7 @@ const Home = () => {
     res
       .json()
       .then((json) => {
-        setTurtles(json.species);
+        setSpecies(json.species);
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
@@ -23,40 +23,42 @@ const Home = () => {
   if (isLoading) {
     return (
       <>
-        <h1>Star Wars Species!</h1>
-        <div>Loading species...</div>
+        <div className="container">
+          <h1>Star Wars Species!</h1>
+          <p>Loading species...</p>
+        </div>
       </>
     );
   }
 
   const renderRows = () => {
-    return turtles.map((turtle) => {
-      const { name, classification, homeworld, language } = turtle;
+    return species.map((specie) => {
+      const { name, classification, homeworld, language } = specie;
       return (
-        <tr key={name}>
-          <td>{name}</td>
-          <td>{classification}</td>
-          <td>{homeworld}</td>
-          <td>{language}</td>
-        </tr>
+        <li className="table-row" key={name}>
+          <div className="col col-1">{name}</div>
+          <div className="col col-2">{classification}</div>
+          <div className="col col-3">{homeworld}</div>
+          <div className="col col-4">{language}</div>
+        </li>
       );
     });
   };
 
   return (
     <>
-      <h1>Star Wars Species!</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Classification</th>
-            <th>Homeworld</th>
-            <th>Language</th>
-          </tr>
-        </thead>
-        <tbody>{renderRows()}</tbody>
-      </table>
+      <div className="container">
+        <h1>Star Wars Species!</h1>
+        <ul className="responsive-table">
+          <li className="table-header">
+            <div className="col col-1">Name</div>
+            <div className="col col-2">Classification</div>
+            <div className="col col-3">Homeworld</div>
+            <div className="col col-4">Language</div>
+          </li>
+          {renderRows()}
+        </ul>
+      </div>
     </>
   );
 };

@@ -7,7 +7,7 @@ import config from './config/auth0.config.json';
 import * as serviceWorker from './serviceWorker';
 
 // A function that routes the user to the right place
-// after login
+// after logging in
 const onRedirectCallback = (appState) => {
   window.history.replaceState(
     {},
