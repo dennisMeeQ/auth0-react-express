@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "10.x"
-      - run: npm install client
+      - run: npm install
         working-directory: ./client
       - name: linter client
         run: npm run lint
@@ -19,7 +19,7 @@ jobs:
       - name: dependency-check client
         run: npm audit
         working-directory: ./client
-      - run: npm install api
+      - run: npm install
         working-directory: ./api
       - name: linter api
         run: npm run lint
