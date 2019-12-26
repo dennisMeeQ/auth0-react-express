@@ -2,9 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const { authenticated } = require('./security');
-
-const species = require('./data/species.json');
-const people = require('./data/people.json');
+const { species, people } = require('./api-data');
 
 const app = express();
 
