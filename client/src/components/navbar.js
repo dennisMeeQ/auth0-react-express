@@ -7,6 +7,12 @@ import './navbar.css';
 const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
+  const redirectUrl = window.location.href || 'http://localhost:3000';
+
+  const logoutWithRedirect = () => {
+    logout({ returnTo: redirectUrl });
+  };
+
   return (
     <nav className="menu">
       <ul className="menu__list">
@@ -44,7 +50,7 @@ const NavBar = () => {
           <li className="menu__group">
             <button
               className="menu__button"
-              onClick={() => logout()}
+              onClick={logoutWithRedirect}
               type="button"
             >
               Log out
