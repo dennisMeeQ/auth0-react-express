@@ -6,8 +6,8 @@ const { species, people } = require('./api-data');
 
 const app = express();
 
-const corsOrigin = process.env.CORS || 'http://localhost:3000';
-app.use(cors({ origin: [corsOrigin] }));
+const origin = process.env.CORS || 'http://localhost:3000';
+app.use(cors({ origin }));
 
 // Routes
 app.get('/people', authenticated, (req, res) => {
