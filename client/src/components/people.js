@@ -10,7 +10,7 @@ const Home = () => {
   const { getTokenSilently } = useAuth0();
 
   const fetchData = async () => {
-    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
 
     const token = await getTokenSilently();
 

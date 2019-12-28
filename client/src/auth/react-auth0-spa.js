@@ -1,17 +1,16 @@
+/* eslint-disable camelcase */
 import React, { useState, useEffect, useContext } from 'react';
 import createAuth0Client from '@auth0/auth0-spa-js';
 
 const DEFAULT_REDIRECT_CALLBACK = () =>
   window.history.replaceState({}, document.title, window.location.pathname);
-const LOGOUT_REDIRECT_URL =
-  window.location.href.split(/[?#]/)[0] || 'http://localhost:3000';
 
 export const Auth0Context = React.createContext();
 export const useAuth0 = () => useContext(Auth0Context);
 export const Auth0Provider = ({
   children,
   onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
-  logoutRedirectUrl = LOGOUT_REDIRECT_URL,
+  redirect_uri,
   ...initOptions
 }) => {
   const [isAuthenticated, setIsAuthenticated] = useState();
@@ -22,7 +21,10 @@ export const Auth0Provider = ({
 
   useEffect(() => {
     const initAuth0 = async () => {
-      const auth0FromHook = await createAuth0Client(initOptions);
+      const auth0FromHook = await createAuth0Client({
+        redirect_uri,
+        ...initOptions,
+      });
       setAuth0(auth0FromHook);
 
       if (window.location.search.includes('code=')) {
@@ -84,7 +86,7 @@ export const Auth0Provider = ({
         getTokenWithPopup: (...p) => auth0Client.getTokenWithPopup(...p),
         logout: (...p) => auth0Client.logout(...p),
         logoutWithRedirect: (...p) =>
-          auth0Client.logout({ returnTo: logoutRedirectUrl, ...p }),
+          auth0Client.logout({ returnTo: redirect_uri, ...p }),
       }}
     >
       {children}
