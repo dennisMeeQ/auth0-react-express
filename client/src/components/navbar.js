@@ -5,13 +5,7 @@ import { useAuth0 } from '../auth/react-auth0-spa';
 import './navbar.css';
 
 const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
-
-  const redirectUrl = window.location.href || 'http://localhost:3000';
-
-  const logoutWithRedirect = () => {
-    logout({ returnTo: redirectUrl });
-  };
+  const { isAuthenticated, loginWithRedirect, logoutWithRedirect } = useAuth0();
 
   return (
     <nav className="menu">
@@ -50,7 +44,7 @@ const NavBar = () => {
           <li className="menu__group">
             <button
               className="menu__button"
-              onClick={logoutWithRedirect}
+              onClick={() => logoutWithRedirect({})}
               type="button"
             >
               Log out

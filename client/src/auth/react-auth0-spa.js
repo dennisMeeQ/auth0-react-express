@@ -3,12 +3,15 @@ import createAuth0Client from '@auth0/auth0-spa-js';
 
 const DEFAULT_REDIRECT_CALLBACK = () =>
   window.history.replaceState({}, document.title, window.location.pathname);
+const LOGOUT_REDIRECT_URL =
+  window.location.href.split(/[?#]/)[0] || 'http://localhost:3000';
 
 export const Auth0Context = React.createContext();
 export const useAuth0 = () => useContext(Auth0Context);
 export const Auth0Provider = ({
   children,
   onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
+  logoutRedirectUrl = LOGOUT_REDIRECT_URL,
   ...initOptions
 }) => {
   const [isAuthenticated, setIsAuthenticated] = useState();
@@ -80,6 +83,8 @@ export const Auth0Provider = ({
         getTokenSilently: (...p) => auth0Client.getTokenSilently(...p),
         getTokenWithPopup: (...p) => auth0Client.getTokenWithPopup(...p),
         logout: (...p) => auth0Client.logout(...p),
+        logoutWithRedirect: (...p) =>
+          auth0Client.logout({ returnTo: logoutRedirectUrl, ...p }),
       }}
     >
       {children}
