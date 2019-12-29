@@ -5,6 +5,7 @@ import NavBar from './components/navbar';
 import Home from './components/home';
 import People from './components/people';
 import Profile from './components/profile';
+import GitHubCorner from './components/github';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <AuthenticatedRoute path="/people" component={People} />
         </Switch>
       </BrowserRouter>
+      <GitHubCorner />
     </div>
   );
 }
