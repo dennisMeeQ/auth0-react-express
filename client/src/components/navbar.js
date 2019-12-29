@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '../auth/react-auth0-spa';
 
+import GitHubCorner from './github';
+
 import './navbar.css';
 
 const NavBar = () => {
@@ -29,6 +31,9 @@ const NavBar = () => {
             </Link>
           </li>
         )}
+        {/* just a little cheating ... */}
+        {!isAuthenticated && <li className="menu__group">&nbsp;</li>}
+        {!isAuthenticated && <li className="menu__group">&nbsp;</li>}
         {!isAuthenticated && (
           <li className="menu__group">
             <button
@@ -51,6 +56,9 @@ const NavBar = () => {
             </button>
           </li>
         )}
+        <li className="menu__group">
+          <GitHubCorner />
+        </li>
       </ul>
     </nav>
   );
