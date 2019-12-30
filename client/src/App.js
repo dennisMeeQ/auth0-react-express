@@ -6,9 +6,9 @@ import Home from './components/home';
 import People from './components/people';
 import Profile from './components/profile';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <header>
           <NavBar />
@@ -21,6 +21,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

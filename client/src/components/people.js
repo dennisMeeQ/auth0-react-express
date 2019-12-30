@@ -4,7 +4,7 @@ import { useAuth0 } from '../auth/react-auth0-spa';
 
 import './table.css';
 
-const Home = () => {
+const People = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [people, setPeople] = useState();
   const { getTokenSilently } = useAuth0();
@@ -81,4 +81,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default People;

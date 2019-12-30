@@ -18,9 +18,13 @@ const Home = () => {
       .catch((err) => console.log(err));
   }
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  useEffect(
+    () => {
+      fetchData();
+    },
+    // eslint-disable-next-line
+    []
+  );
 
   if (isLoading) {
     return (
