@@ -4,7 +4,9 @@
 
 An example implementation of OAuth/OIDC flows in single applications using Auth0, React and Express.
 
-Please refer to [this article](https://medium.com/better-programming/how-to-securely-implement-authentication-in-single-page-applications-670534da746f) for further details.
+Please refer to these articles for details:
+* [Concepts, flows and Security considerations](https://medium.com/better-programming/how-to-securely-implement-authentication-in-single-page-applications-670534da746f)
+* [Implementation details](https://medium.com/better-programming/how-to-implement-authentication-in-react-using-auth0-1b5ecb6c8fe0)
 
 ## Try it online
 
