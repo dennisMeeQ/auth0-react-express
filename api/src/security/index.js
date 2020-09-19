@@ -5,7 +5,7 @@ const jwksRsa = require('jwks-rsa');
 const authConfig = {
   issuer: 'https://spa-test.auth0.com/',
   audience: 'https://api.allthingsauth.dev',
-  algorithm: ['RS256'],
+  algorithms: ['RS256'],
 };
 
 const secret = jwksRsa.expressJwtSecret({
