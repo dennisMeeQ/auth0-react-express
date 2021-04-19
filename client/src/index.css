@@ -3,11 +3,20 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.container.profile {
+  padding: 20px 0;
+}
+
+h1 {
+  padding: 10px 0;
 }
 
 h2 {

@@ -1,6 +1,6 @@
 {
-  "short_name": "All Things Auth",
-  "name": "All Things Auth - React with Auth0",
+  "short_name": "Diggys Pizza",
+  "name": "Diggys Pizza - React with Auth0",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +8,18 @@
       "type": "image/x-icon"
     },
     {
-      "src": "allthingsauth-logo-192.png",
+      "src": "android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "allthingsauth-logo-512.png",
+      "src": "android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#95a5a6",
+  "theme_color": "#da532c",
   "background_color": "#d1d1d0"
 }

@@ -1,9 +1,13 @@
+ul.responsive-table {
+  padding: 10px 0;
+}
+
 .responsive-table li {
   border-radius: 3px;
   padding: 25px 30px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .responsive-table .table-header {
   background-color: #95a5a6;
@@ -14,6 +18,7 @@
 .responsive-table .table-row {
   background-color: #ffffff;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 .responsive-table .col-1 {
   flex-basis: 30%;
@@ -30,6 +35,17 @@
 .responsive-table .col-5 {
   flex-basis: 10%;
 }
+
+.responsive-table input {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
 @media all and (max-width: 500px) {
   .responsive-table .table-header {
     display: none;

@@ -4,9 +4,9 @@ import { useAuth0 } from '../auth/react-auth0-spa';
 
 import './table.css';
 
-const People = () => {
+const Menus = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [people, setPeople] = useState();
+  const [menus, setMenus] = useState();
   const { getTokenSilently } = useAuth0();
 
   const fetchData = async () => {
@@ -14,7 +14,7 @@ const People = () => {
 
     const token = await getTokenSilently();
 
-    const res = await fetch(`${baseUrl}/people`, {
+    const res = await fetch(`${baseUrl}/menu`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -22,7 +22,7 @@ const People = () => {
     res
       .json()
       .then((json) => {
-        setPeople(json.people);
+        setMenus(json.menu);
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
@@ -40,23 +40,23 @@ const People = () => {
     return (
       <>
         <div className="container">
-          <h1>Star Wars Characters!</h1>
-          <p>Loading People...</p>
+          <h1>Diggys Pizza</h1>
+          <p>Loading Menus...</p>
         </div>
       </>
     );
   }
 
   const renderRows = () => {
-    return people.map((person) => {
-      const { name, height, birth_year, gender, species } = person;
+    return menus.map((person) => {
+      const { name, price } = person;
       return (
         <li className="table-row" key={name}>
-          <div className="col col-1">{name}</div>
-          <div className="col col-2">{gender}</div>
-          <div className="col col-3">{species}</div>
-          <div className="col col-4">{birth_year}</div>
-          <div className="col col-5">{height}</div>
+          <div className="col col-1">
+            <input readOnly type="text" value={name} />
+            {name}
+          </div>
+          <div className="col col-2">{price}</div>
         </li>
       );
     });
@@ -65,14 +65,11 @@ const People = () => {
   return (
     <>
       <div className="container">
-        <h1>Star Wars Characters!</h1>
+        <h1>Diggys Pizza</h1>
         <ul className="responsive-table">
           <li className="table-header">
             <div className="col col-1">Name</div>
-            <div className="col col-2">Gender</div>
-            <div className="col col-3">Species</div>
-            <div className="col col-4">Birth Year</div>
-            <div className="col col-5">Height</div>
+            <div className="col col-2">price</div>
           </li>
           {renderRows()}
         </ul>
@@ -81,4 +78,4 @@ const People = () => {
   );
 };
 
-export default People;
+export default Menus;

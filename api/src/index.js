@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const { authenticated } = require('./security');
-const { species, people } = require('./api-data');
+const { species, menu } = require('./api-data');
 
 const app = express();
 
@@ -10,8 +10,8 @@ const origin = process.env.CORS || 'http://localhost:3000';
 app.use(cors({ origin }));
 
 // Routes
-app.get('/people', authenticated, (req, res) => {
-  res.send({ people });
+app.get('/menu', authenticated, (req, res) => {
+  res.send({ menu });
 });
 
 app.get('/species', (req, res) => {

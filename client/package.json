@@ -4,8 +4,9 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-spa-js": "1.12.1",
+    "axios": "^0.21.1",
     "babel-eslint": "10.1.0",
-    "eslint": "6.8.0",
+    "eslint": "^7.11.0",
     "eslint-config-airbnb": "18.1.0",
     "eslint-config-prettier": "6.10.1",
     "eslint-config-react-app": "5.2.1",
@@ -17,10 +18,10 @@
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "1.19.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-router-dom": "5.2.0",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

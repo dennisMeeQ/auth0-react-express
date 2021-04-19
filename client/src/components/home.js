@@ -30,8 +30,8 @@ const Home = () => {
     return (
       <>
         <div className="container">
-          <h1>Star Wars Species!</h1>
-          <p>Loading species...</p>
+          <h1>Diggys Pizza</h1>
+          <p>Loading menu...</p>
         </div>
       </>
     );
@@ -39,13 +39,14 @@ const Home = () => {
 
   const renderRows = () => {
     return species.map((specie) => {
-      const { name, classification, homeworld, language } = specie;
+      const { name, price } = specie;
       return (
         <li className="table-row" key={name}>
-          <div className="col col-1">{name}</div>
-          <div className="col col-2">{classification}</div>
-          <div className="col col-3">{homeworld}</div>
-          <div className="col col-4">{language}</div>
+          <div className="col col-1">
+            <input readOnly type="text" value={name} />
+            {name}
+          </div>
+          <div className="col col-2">{price}</div>
         </li>
       );
     });
@@ -54,13 +55,11 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <h1>Star Wars Species!</h1>
+        <h1>Diggys Pizza</h1>
         <ul className="responsive-table">
           <li className="table-header">
             <div className="col col-1">Name</div>
-            <div className="col col-2">Classification</div>
-            <div className="col col-3">Homeworld</div>
-            <div className="col col-4">Language</div>
+            <div className="col col-2">Price</div>
           </li>
           {renderRows()}
         </ul>

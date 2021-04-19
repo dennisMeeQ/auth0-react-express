@@ -1,4 +1,4 @@
 const species = require('./data/species.json');
-const people = require('./data/people.json');
+const menu = require('./data/menu.json');
 
-module.exports = { species, people };
+module.exports = { species, menu };

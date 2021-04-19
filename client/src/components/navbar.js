@@ -2,15 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '../auth/react-auth0-spa';
 
-import GitHubCorner from './github';
-
 import './navbar.css';
 
 const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logoutWithRedirect } = useAuth0();
 
   return (
-    <nav className="menu">
+    <nav className="menu container">
       <ul className="menu__list">
         <li className="menu__group">
           <Link className="menu__link" to="/">
@@ -19,8 +17,8 @@ const NavBar = () => {
         </li>
         {isAuthenticated && (
           <li className="menu__group">
-            <Link className="menu__link" to="/people">
-              People
+            <Link className="menu__link" to="/order">
+              Order
             </Link>
           </li>
         )}
@@ -56,9 +54,6 @@ const NavBar = () => {
             </button>
           </li>
         )}
-        <li className="menu__group">
-          <GitHubCorner />
-        </li>
       </ul>
     </nav>
   );
