@@ -5,7 +5,7 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "1.12.1",
     "babel-eslint": "10.1.0",
-    "eslint": "6.8.0",
+    "eslint": "7.16.0",
     "eslint-config-airbnb": "18.1.0",
     "eslint-config-prettier": "6.10.1",
     "eslint-config-react-app": "5.2.1",
@@ -20,7 +20,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "5.2.0",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
